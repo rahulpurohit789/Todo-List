@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json());
 
 
-mongoose.connect("mongodb+srv://rahulpurohitrp789rp:PzM24fTCwImuCsCS@todo.cey8u.mongodb.net/?retryWrites=true&w=majority&appName=todo")
+mongoose.connect("mongodb+srv://UserName:Password.cey8u.mongodb.net/?retryWrites=true&w=majority&appName=todo")
 
 app.get('/get',(req,res)=>{
     TodoModel.find()
