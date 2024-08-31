@@ -1,0 +1,129 @@
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif; 
+  background-color: #f4f4f9; 
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.create_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.create_form input {
+  width: 300px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.create_form input:focus {
+  border-color: #007bff;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.create_form button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+  user-select: none;
+}
+
+.create_form button:hover {
+  background-color: #555;
+  transform: scale(1.05);
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  width: 360px;
+  justify-content: space-between;
+  background-color: #fff;
+  color: #333;
+  height: 40px;
+  padding: 5px 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeIn 0.5s forwards;
+}
+
+.task:nth-child(even) {
+  animation: fadeIn 0.5s forwards 0.2s;
+}
+
+.task:nth-child(odd) {
+  animation: fadeIn 0.5s forwards 0.4s;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.checkbox p {
+  margin: 0;
+  padding-left: 10px;
+  user-select: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.checkbox .icon {
+  margin-right: 10px;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.checkbox:hover .icon {
+  color: #007bff;
+}
+
+.task div span {
+  margin: 0 5px;
+}
+
+.task div .icon {
+  cursor: pointer;
+  font-size: 20px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.task div .icon:hover {
+  color: #dc3545;
+  transform: scale(1.1);
+}
+
+.line_through {
+  text-decoration: line-through;
+  color: #888;
+}
+
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
